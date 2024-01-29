@@ -1,18 +1,37 @@
-.container{
-    margin: 46px 100px;
+/* nav element */
+.nav-container {
+    margin: 24px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.list-container{
+
+/* list element */
+.list-container {
     display: flex;
     gap: 48px;
     align-items: center;
     list-style: none;
+    text-decoration: none;
 }
 
-.website-title{
+
+/* list tag */
+.list {
+    text-decoration: none;
+    list-style: none;
+    color: #3F3F3F;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* website title styling */
+.website-title {
     color: #F72D57;
     text-align: center;
     font-family: Praise;
@@ -20,4 +39,132 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+
+/* active route styling */
+.active {
+    color: #F72D57;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+/* pending route styling */
+.pending {
+    color: #3F3F3F;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+
+/* cart icon styling */
+.cart-icon {
+    font-size: 30px;
+    color: #3F3F3F;
+}
+
+
+/* sign up button styling */
+.sign-up-btn {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 9px 28px;
+    line-height: normal;
+    border-radius: 5px;
+    background: #F72D57;
+}
+
+
+/* responsive part */
+
+
+/* For small devices */
+@media screen and (max-width: 425px) {
+    .nav-container {
+        display: none;
+    }
+
+    .smallDevices-nav-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 22px;
+        position: relative;
+    }
+
+    .title-menu-container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* website title styling */
+    .website-title {
+        color: #F72D57;
+        font-family: Praise;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+       
+    }
+
+    .menu-button {
+        border: none !important;
+        background: none;
+    }
+
+    .small-device-navlinks {
+        width: 100%;
+        background: #F72D57;
+    }
+    .cross-btn-icon{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+/* For small and medium devices */
+@media screen and (max-width: 1024px) {
+    .smallDevices-nav-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 22px;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .title-menu-container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        position: relative;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1025px) {
+    .smallDevices-nav-container {
+        display: none;
+    }
+
+    .nav-container {
+        display: flex;
+    }
 }
