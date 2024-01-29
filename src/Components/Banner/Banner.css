@@ -1,0 +1,52 @@
+.banner-container {
+    margin: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-title {
+    color: #3F3F3F;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.important-text {
+    color: #F72D57;
+}
+
+.text-description {
+    color: #3F3F3F;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 70%;
+    margin-top: 24px;
+
+
+}
+
+@media screen and (min-width: 375px) and (max-width:1023px) {
+    .banner-container {
+        flex-direction: column;
+        margin: auto 22px;
+    }
+
+    .banner-image {
+        width: 398.452px;
+        flex-shrink: 0;
+    }
+    .text-title {
+        font-size: 35px;
+    }
+    .text-description{
+        font-size: 15px;
+        width: 90%;
+    }
+}
