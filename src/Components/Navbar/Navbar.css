@@ -1,0 +1,23 @@
+.container{
+    margin: 46px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-container{
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    list-style: none;
+}
+
+.website-title{
+    color: #F72D57;
+    text-align: center;
+    font-family: Praise;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
