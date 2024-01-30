@@ -13,7 +13,7 @@
     flex-grow: 1;
 }
 
-.text-title {
+.getToKnowUs-text-title {
     color: #3F3F3F;
     font-family: Poppins;
     font-size: 2.25rem;
@@ -62,7 +62,7 @@
         grid-template-columns: 1fr;
         grid-auto-flow: row;
     }
-
+   
     /* Reverse the order for all rows on mobile and medium devices */
     .row .text-container {
         order: 2;
@@ -72,7 +72,7 @@
         order: 1;
     }
 
-    .text-title {
+    .getToKnowUs-text-title {
         font-size: 1.5rem;
     }
 
@@ -99,7 +99,7 @@
         align-items: center;
     }
    
-    .text-title {
+    .getToKnowUs-text-title {
         color: #3F3F3F;
         font-family: Poppins;
         font-size: 25px;
