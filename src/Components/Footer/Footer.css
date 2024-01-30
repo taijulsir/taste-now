@@ -1,0 +1,50 @@
+.footer-container {
+    background: #F72D57;
+    width: 100%;
+    margin: 132px 0px 0px 0px;
+}
+
+.container{
+   
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 42px 100px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.title-social-link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.website-name {
+    color: #FFF;
+    text-align: center;
+    font-family: Praise;
+    font-size: 48px;
+}
+
+.social-links-container {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.service-container {
+    color: #FFF;
+    font-family: "Netflix Sans";
+    font-size: 13px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:15px
+
+}

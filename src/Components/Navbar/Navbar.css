@@ -122,8 +122,6 @@
         font-size: 32px;
     }
 
-
-
     .menu-button-container {
         display: flex;
         justify-content: flex-end;
@@ -192,7 +190,6 @@
         font-size: 16px;
         border-radius: 5px;
         background: #FFF;
-        padding: 100px;
         padding-bottom: 136px;
         padding: 9px 17px;
         text-decoration: none !important;
@@ -232,7 +229,7 @@
     }
 
     .nav-container {
-        margin: 24px 80px;
+        margin: 24px 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -252,4 +249,5 @@
     .smallDevices-nav-container {
         display: none;
     }
+    
 }
