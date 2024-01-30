@@ -6,8 +6,8 @@ const GetToKnowUs = () => {
     return (
         <div className="get-to-know-us-container">
             <h3 className="text-title margin-bottom">Get to know <span className="special-text">us</span></h3>
-            <div className="row">
-                <div><img src={firstImage} alt="Teamwork session" className="get-to-know-us-image" /></div>
+            <div className="row"> 
+                <div className="image-container"><img src={firstImage} alt="Teamwork session" className="get-to-know-us-image"  width="581px" /></div>
                 <div className="text-container">
                     <h3 className="text-title">
                         <span className="special-text">Teamwork </span>
@@ -21,7 +21,7 @@ const GetToKnowUs = () => {
                     <h3 className=" text-title">We are all in for the <br /> <span className="special-text">enviroment</span></h3>
                     <p className="text-description">TasteNow donates $1 penny for every purchase made from the app to an organization that takes care of our enviromet. We belive that with everyone´s help, we can make a better world. </p>
                 </div>
-                <div><img src={secondImage} alt="Working Environment meeting" className="get-to-know-us-image" /></div>
+                <div className="image-container"><img src={secondImage} alt="Working Environment meeting" className="get-to-know-us-image" width="581px" /></div>
             </div>
         </div>
     );
