@@ -14,17 +14,19 @@ const Navbar = () => {
             <div className="smallDevices-nav-container">
                 {/* Menu item and website title */}
                 <div className="title-menu-container">
-                   <div>
-                   <button className="menu-button" onClick={() => setMenuOpen(true)}><img src={menuIcon} alt="" /></button>  
+                    <div>
+                        <div className="menu-button-container">
+                            <button className="menu-button"  onClick={() => setMenuOpen(true)}><img src={menuIcon} alt="" /></button>
+                        </div>
                         {menuOpen &&
                             //  cross button
                             <div className="small-device-navlinks">
                                 <div className="cross-btn-container">
-                                    <button className="cross-btn" onClick={()=>setMenuOpen(false)}><RxCross2 className="cross-btn-icon"></RxCross2></button>
+                                    <button className="cross-btn" onClick={() => setMenuOpen(false)}><RxCross2 className="cross-btn-icon"></RxCross2></button>
                                 </div>
                                 {/* title */}
                                 <div className="title-container">
-                                    <h3 className="title">Taste Now</h3>
+                                    <h3 className="small-device-menu-title">Taste Now</h3>
                                 </div>
                                 {/* border line */}
                                 <div className="border-container">
@@ -37,24 +39,23 @@ const Navbar = () => {
                                             <NavLink to="/" className="active">Home</NavLink>
                                         </li>
                                         <li className="list">
-                                            <NavLink to="/about" className="pending">About Us</NavLink>
+                                            <NavLink  className="pending">About Us</NavLink>
                                         </li>
                                         <li className="list">
-                                            <NavLink to="/blog" className="pending">Blog</NavLink>
+                                            <NavLink  className="pending">Blog</NavLink>
                                         </li>
                                         <li className="list">
-                                            <NavLink to="/contactUs" className="pending">Contact Us</NavLink>
-                                        </li>
-                                       
-                                        <li className="list ">
-                                            <NavLink to="/register" className="sign-up-btn pending">Sign Up</NavLink>
+                                            <NavLink  className="pending">Contact Us</NavLink>
                                         </li>
                                     </ul>
+                                    <div className="" style={{display:'flex',justifyContent:"center",marginTop:"100px",marginBottom: "136px" ,border:"none"}}>
+                                        <button className="sign-up-btn" style={{border:"none"}} >Sign Up</button>
+                                    </div>
                                 </div>
 
 
                             </div>}
-                   </div>
+                    </div>
                     <div className="website-title">Taste Now</div>
                 </div>
                 {/* cart icon */}
@@ -75,21 +76,21 @@ const Navbar = () => {
                             <NavLink to="/" className="active">Home</NavLink>
                         </li>
                         <li className="list">
-                            <NavLink to="/about" className="pending">About Us</NavLink>
+                            <NavLink className="pending">About Us</NavLink>
                         </li>
                         <li className="list">
-                            <NavLink to="/blog" className="pending">Blog</NavLink>
+                            <NavLink className="pending">Blog</NavLink>
                         </li>
                         <li className="list">
-                            <NavLink to="/contactUs" className="pending">Contact Us</NavLink>
+                            <NavLink className="pending">Contact Us</NavLink>
                         </li>
                         <li className="list">
-                            <NavLink to="/cart" className="pending">
+                            <NavLink className="pending">
                                 <AiOutlineShoppingCart className="cart-icon" />
                             </NavLink>
                         </li>
                         <li className="list ">
-                            <NavLink to="/register" className="sign-up-btn pending">Sign Up</NavLink>
+                            <NavLink className="sign-up-btn pending">Sign Up</NavLink>
                         </li>
                     </ul>
                 </div>

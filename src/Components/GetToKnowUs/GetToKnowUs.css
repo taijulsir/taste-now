@@ -1,5 +1,5 @@
 .get-to-know-us-container {
-    margin: 0 100px;
+    margin: 142px 100px auto;
     display: flex;
     flex-direction: column;
 }
@@ -18,7 +18,8 @@
     font-weight: 700;
     line-height: 1.2;
 }
-.margin-bottom{
+
+.margin-bottom {
     margin-bottom: 31px;
 }
 
@@ -32,7 +33,7 @@
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
-    width: 100%;
+    width: 70%;
 }
 
 .first-row-text-width {
@@ -63,14 +64,17 @@
     .text-title {
         font-size: 1.5rem;
     }
-    .get-to-know-us-image{
+
+    .get-to-know-us-image {
         max-width: 100%;
         height: auto;
     }
-    .text-description{
+
+    .text-description {
         font-size: 15px;
         width: 100%;
     }
+
     .row-reverse {
         flex-direction: column-reverse;
     }

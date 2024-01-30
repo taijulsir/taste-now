@@ -6,9 +6,9 @@ import PopularCategoires from "../../Components/PopularCategories/PopularCategoi
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            {/* <Banner></Banner>
             <PopularCategoires></PopularCategoires>
-            <GetToKnowUs></GetToKnowUs>
+            <GetToKnowUs></GetToKnowUs> */}
         </div>
     );
 };

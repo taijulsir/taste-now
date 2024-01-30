@@ -25,9 +25,7 @@
     text-align: center;
     font-family: Poppins;
     font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
 }
 
 /* website title styling */
@@ -36,9 +34,7 @@
     text-align: center;
     font-family: Praise;
     font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
 }
 
 
@@ -60,9 +56,7 @@
     text-align: center;
     font-family: Poppins;
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     text-decoration: none;
 }
 
@@ -80,10 +74,7 @@
     text-align: center;
     font-family: Poppins;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     padding: 9px 28px;
-    line-height: normal;
     border-radius: 5px;
     background: #F72D57;
 }
@@ -91,9 +82,8 @@
 
 /* responsive part */
 
-
 /* For small devices */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1023px) {
     .nav-container {
         display: none;
     }
@@ -101,14 +91,28 @@
     .smallDevices-nav-container {
         display: flex;
         justify-content: space-between;
-        margin: 18px 22px;
+        margin: 18px 10px;
         position: relative;
+        width: 100%;
+    }
+
+    .small-device-navlinks {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        margin-top: -30px;
+    }
+
+    .small-device-navlinks {
+        width: 100%;
+        background: #F72D57;
     }
 
     .title-menu-container {
         display: flex;
         gap: 15px;
         align-items: center;
+        width: 100%;
     }
 
     /* website title styling */
@@ -116,55 +120,114 @@
         color: #F72D57;
         font-family: Praise;
         font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-       
     }
 
-    .menu-button {
-        border: none !important;
-        background: none;
-    }
 
-    .small-device-navlinks {
-        width: 100%;
-        background: #F72D57;
-    }
-    .cross-btn-icon{
+
+    .menu-button-container {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-}
-
-/* For small and medium devices */
-@media screen and (max-width: 1023px) {
-    .smallDevices-nav-container {
-        display: flex;
-        justify-content: space-between;
-        margin: 18px 22px;
-    }
-
-    .nav-container {
-        display: none;
-    }
-
-    .title-menu-container {
-        display: flex;
-        gap: 20px;
-        align-items: center;
+        width: 100%;
         position: relative;
+
     }
+
+    .menu-button {
+        border: none;
+        background: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .small-device-menu-title {
+        color: #FFF;
+        text-align: center;
+        font-family: Praise;
+        font-size: 55px;
+        padding-top: 74px;
+        text-align: center;
+        padding-bottom: 126px;
+        white-space: nowrap;
+    }
+
+    .border-container {
+        content: '';
+        border: 2px solid white;
+        inset: 0;
+    }
+
+    .small-device-links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 61px;
+        padding-top: 61px;
+    }
+
+    .cross-btn-container {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 23px;
+        padding-right: 26px;   
+    }
+
+    .cross-btn{
+        border:none;
+        background: none ;
+    }
+    .cross-btn-icon {
+        font-size:36px;
+        color:#FFF
+    }
+
+    
+    /* sign up button styling */
+    .sign-up-btn {
+        color: #F72D57;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        border-radius: 5px;
+        background: #FFF;
+        padding: 100px;
+        padding-bottom: 136px;
+        padding: 9px 17px;
+        text-decoration: none !important;
+    }
+
+    /* active route styling */
+    .active {
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 61px;
+
+    }
+
+    /* pending route styling */
+    .pending {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 22px;
+        padding-top: 61px;
+        /* 73.333% */
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+    }
+
 }
 
-/* For large devices */
+
 @media screen and (min-width: 1024px) {
     .smallDevices-nav-container {
         display: none;
-    }
-
-    .nav-container {
-        display: flex;
     }
 }

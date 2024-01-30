@@ -140,3 +140,43 @@
     font-size: 24px;
  
 }
+
+@media screen and (min-width: 375px) and (max-width:1023px) {
+    .popular-categories-container {
+        margin: 0px 22px;
+    
+    }
+    .tabs-heading {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin-bottom: 20px;
+    }
+    .active-tab {
+        display: flex;
+        gap: 10px;
+        border-radius: 5px;
+        background: #F72D57;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        font-family: Poppins;
+        font-size: 22px;
+    }
+    .inactive-tabs {
+        display: flex;
+        gap: 10px;
+        border-radius: 5px;
+        background: #FFF;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        color: #F72D57;
+        font-family: Poppins;
+        font-size: 22px;
+     
+    }
+}

@@ -26,7 +26,7 @@ const SwiperSlider = ({foods}) => {
                     // responsive issue
                     breakpoints={{
                         // when window width is <= 425px
-                        425: {
+                        375: {
                             slidesPerView: 1,
                             spaceBetween: 10
                         },
