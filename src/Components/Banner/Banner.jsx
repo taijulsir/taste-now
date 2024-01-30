@@ -7,9 +7,9 @@ const Banner = () => {
             <div className='banner-container'>
                 {/* text */}
                 <div className=' text-container'>
-                    <h1 className='text-title'>Experience Food <br />
+                    <h1 className='banner-text-title'>Experience Food <br />
                         <span className='important-text'>Delivery</span> like no other</h1>
-                    <p className='text-description'>
+                    <p className='banner-text-description'>
                         We deliver the food of your choice wherever, whenever. Select your food from only the top restaurants in the area, and get it in a flash. Download the app now to discover more.
                     </p>
                 </div>

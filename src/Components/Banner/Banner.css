@@ -7,7 +7,7 @@
     height: 600px;
 }
 
-.text-title {
+.banner-text-title {
     color: #3F3F3F;
     font-family: Poppins;
     font-size: 48px;
@@ -20,7 +20,7 @@
     color: #F72D57;
 }
 
-.text-description {
+.banner-text-description {
     color: #3F3F3F;
     font-family: Poppins;
     font-size: 16px;
