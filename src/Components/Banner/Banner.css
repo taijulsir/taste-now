@@ -43,11 +43,62 @@
         width: 370px;
         flex-shrink: 0;
     }
-    .text-title {
-        font-size: 35px;
+
+    .banner-text-title {
+        color: #3F3F3F;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
     }
-    .text-description{
-        font-size: 15px;
-        width: 90%;
+
+    .important-text {
+        color: #F72D57;
+        font-size: 30px;
     }
+
+    .banner-text-description{
+        width: 100%;
+    }
+    
+
+   
+    
+}
+
+@media screen and (min-width:1024px) and (max-width:1500px) {
+
+    .banner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-container {
+        margin: 0px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        height: 600px;
+        flex-grow: 1;
+    }
+    .banner-image {
+        width: 560px;
+        flex-shrink: 0;
+    }
+    .banner-text-title{
+        color: #3F3F3F;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .banner-text-description{
+        width: 100%;
+    }
+    
+
+   
 }

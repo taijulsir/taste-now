@@ -90,7 +90,7 @@
 
     .smallDevices-nav-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 18px 10px;
         position: relative;
         width: 100%;
@@ -110,7 +110,7 @@
 
     .title-menu-container {
         display: flex;
-        gap: 15px;
+        gap: 10px;
         align-items: center;
         width: 100%;
     }
@@ -226,7 +226,29 @@
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1050px) {
+    .smallDevices-nav-container {
+        display: none;
+    }
+
+    .nav-container {
+        margin: 24px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    /* list element */
+    .list-container {
+        display: flex;
+        gap: 48px;
+        align-items: center;
+        list-style: none;
+        text-decoration: none;
+    }
+}
+@media screen and (min-width: 1051px)  {
     .smallDevices-nav-container {
         display: none;
     }
