@@ -1,18 +1,273 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './PopularCategory.css';
 import SwiperSlider from './SwiperSlider/SwiperSlider';
 
 const PopularCategoires = () => {
-    const [allFoods, setAllFoods] = useState([])
-    const [tabIndex, setTabIndex] = useState(0);
 
-    useEffect(() => {
-        fetch('/public/foods.json')
-            .then(res => res.json())
-            .then(data => setAllFoods(data))
-    }, [])
+    const [tabIndex, setTabIndex] = useState(0);
+    const allFoods = [
+        {
+          "id": 1,
+          "category": "pizza",
+          "foodImage": "https://static.vecteezy.com/system/resources/previews/021/311/747/original/pizza-transparent-background-png.png",
+          "foodName": "Margherita Pizza",
+          "brandName": "Pizza Palace",
+          "price": "$10.99"
+        },
+        {
+          "id": 2,
+          "category": "pizza",
+          "foodImage": "https://pngimg.com/d/pizza_PNG43993.png",
+          "foodName": "Pepperoni Pizza",
+          "brandName": "Cheesy Crust",
+          "price": "$12.99"
+        },
+        {
+          "id": 3,
+          "category": "pizza",
+          "foodImage": "https://png.pngtree.com/png-vector/20230318/ourmid/pngtree-modern-traditional-food-sasami-pizza-3d-model-png-image_6651528.png",
+          "foodName": "Vegetarian Pizza",
+          "brandName": "Garden Fresh",
+          "price": "$11.99"
+        },
+        {
+          "id": 4,
+          "category": "pizza",
+          "foodImage": "https://png.pngtree.com/png-clipart/20231003/original/pngtree-pizza-pizza-png-pizza-ai-generated-png-image_13245852.png",
+          "foodName": "BBQ Chicken Pizza",
+          "brandName": "Smokehouse Pizzeria",
+          "price": "$13.99"
+        },
+        {
+          "id": 5,
+          "category": "burger",
+          "foodImage": "https://i.pinimg.com/originals/95/aa/34/95aa34722ae9ea7e8faa874e5d24ebab.png",
+          "foodName": "Classic Cheeseburger",
+          "brandName": "Burger Haven",
+          "price": "$8.99"
+        },
+        {
+          "id": 6,
+          "category": "burger",
+          "foodImage": "https://i.pinimg.com/originals/c5/cc/20/c5cc2005ad651b73d324513750de085e.png",
+          "foodName": "Double Bacon Burger",
+          "brandName": "Greasy Spoon",
+          "price": "$10.99"
+        },
+        {
+          "id": 7,
+          "category": "burger",
+          "foodImage": "https://i.pinimg.com/736x/9a/eb/61/9aeb6114b6e19eb836a72f18f2d2b1cc.jpg",
+          "foodName": "Spicy Chicken Burger",
+          "brandName": "Hot & Crunchy",
+          "price": "$9.99"
+        },
+        {
+          "id": 8,
+          "category": "burger",
+          "foodImage": "https://www.transparentpng.com/download/burger/hot-burger-king-hd-png-9dzyCE.png",
+          "foodName": "Mushroom Swiss Burger",
+          "brandName": "Juicy Burgers",
+          "price": "$11.99"
+        },
+        {
+          "id": 9,
+          "category": "salad",
+          "foodImage": "https://p7.hiclipart.com/preview/862/110/569/greek-salad-caesar-salad-israeli-salad-turkish-cuisine-salad.jpg",
+          "foodName": "Greek Salad",
+          "brandName": "Healthy Greens",
+          "price": "$7.99"
+        },
+        {
+          "id": 10,
+          "category": "salad",
+          "foodImage": "https://static.vecteezy.com/system/resources/previews/026/860/353/original/green-salad-with-tomato-and-fresh-vegetables-isolated-on-transparent-background-png.png",
+          "foodName": "Caesar Salad",
+          "brandName": "Fresh Crisp",
+          "price": "$8.99"
+        },
+        {
+          "id": 11,
+          "category": "salad",
+          "foodImage": "https://www.pikpng.com/pngl/m/335-3353267_salads-transparent-background-png-clipart.png",
+          "foodName": "Cobb Salad",
+          "brandName": "Gourmet Delights",
+          "price": "$9.99"
+        },
+        {
+          "id": 12,
+          "category": "salad",
+          "foodImage": "https://banner2.cleanpng.com/20180413/axq/kisspng-salad-zakuski-health-food-green-salad-5ad09fa36b5fd9.5099105315236217954398.jpg",
+          "foodName": "Spinach Salad",
+          "brandName": "Fresh n' Green",
+          "price": "$8.99"
+        },
+        {
+          "id": 13,
+          "category": "combo",
+          "foodImage": "https://w7.pngwing.com/pngs/686/527/png-transparent-fast-food-hamburger-sushi-pizza-fast-food-food-breakfast-fast-food-restaurant-thumbnail.png",
+          "foodName": "Combo 1",
+          "brandName": "Fast Delights",
+          "price": "$14.99"
+        },
+        {
+          "id": 14,
+          "category": "combo",
+          "foodImage": "https://e7.pngegg.com/pngimages/317/251/png-clipart-fast-food-junk-food-hamburger-fried-chicken-kfc-fast-food-menu-flyer-food-recipe.png",
+          "foodName": "Combo 2",
+          "brandName": "Quick Bites",
+          "price": "$16.99"
+        },
+        {
+          "id": 15,
+          "category": "combo",
+          "foodImage": "https://w7.pngwing.com/pngs/366/356/png-transparent-hamburger-whopper-chicken-sandwich-fried-chicken-fast-food-fried-chicken-food-recipe-fast-food-restaurant.png",
+          "foodName": "Combo 3",
+          "brandName": "Tasty Treats",
+          "price": "$15.99"
+        },
+        {
+          "id": 16,
+          "category": "combo",
+          "foodImage": "https://static.vecteezy.com/system/resources/previews/027/297/753/original/buffet-table-scene-of-take-out-or-delivery-foods-fried-chicken-wings-and-french-fries-isolated-on-white-transparent-background-ai-generate-png.png",
+          "foodName": "Combo 4",
+          "brandName": "Snack Shack",
+          "price": "$13.99"
+        },
+        {
+          "id": 17,
+          "category": "pizza",
+          "foodImage": "https://image.similarpng.com/very-thumbnail/2022/06/Fresh-delicious-pizza-on-transparent-background-PNG.png",
+          "foodName": "Supreme Pizza",
+          "brandName": "Pizza Heaven",
+          "price": "$15.99"
+        },
+        {
+          "id": 18,
+          "category": "burger",
+          "foodImage": "https://toppng.com/uploads/preview/big-burger-11562902444grmy1oetg2.png",
+          "foodName": "BBQ Bacon Burger",
+          "brandName": "Smokehouse Grill",
+          "price": "$12.99"
+        },
+        {
+          "id": 19,
+          "category": "salad",
+          "foodImage": "https://ongpng.com/wp-content/uploads/2023/10/salad.png",
+          "foodName": "Caprese Salad",
+          "brandName": "Mediterranean Eats",
+          "price": "$10.99"
+        },
+        {
+          "id": 20,
+          "category": "combo",
+          "foodImage": "https://png.pngtree.com/png-vector/20201229/ourmid/pngtree-gourmet-fried-food-mcdonald-s-fast-food-combo-png-image_2665442.jpg",
+          "foodName": "Combo 5",
+          "brandName": "Finger Lickin' Good",
+          "price": "$18.99"
+        },
+        {
+          "id": 21,
+          "category": "pizza",
+          "foodImage": "https://www.freepnglogos.com/uploads/pizza-png/derwent-park-pizza-5.png",
+          "foodName": "Hawaiian Pizza",
+          "brandName": "Tropical Pies",
+          "price": "$14.99"
+        },
+        {
+          "id": 22,
+          "category": "burger",
+          "foodImage": "https://i.pinimg.com/originals/95/aa/34/95aa34722ae9ea7e8faa874e5d24ebab.png",
+          "foodName": "Veggie Burger",
+          "brandName": "Green Eats",
+          "price": "$9.99"
+        },
+        {
+          "id": 23,
+          "category": "salad",
+          "foodImage": "https://static.vecteezy.com/system/resources/previews/026/860/353/original/green-salad-with-tomato-and-fresh-vegetables-isolated-on-transparent-background-png.png",
+          "foodName": "Nicoise Salad",
+          "brandName": "Sea Breeze Salads",
+          "price": "$11.99"
+        },
+        {
+          "id": 24,
+          "category": "combo",
+          "foodImage": "https://e7.pngegg.com/pngimages/317/251/png-clipart-fast-food-junk-food-hamburger-fried-chicken-kfc-fast-food-menu-flyer-food-recipe.png",
+          "foodName": "Combo 6",
+          "brandName": "Quick Fix",
+          "price": "$17.99"
+        },
+        {
+            "id": 25,
+            "category": "pizza",
+            "foodImage": "https://image.similarpng.com/very-thumbnail/2022/03/Tomato-and-lettuce-salad-in-wooden-bowl-isolated-on-transparent-background-PNG.png",
+            "foodName": "Vegetable Deluxe Pizza",
+            "brandName": "Garden Fresh",
+            "price": "$13.99"
+        },
+        {
+            "id": 26,
+            "category": "pizza",
+            "foodImage": "https://img.lovepik.com/element/45007/3626.png_860.png",
+            "foodName": "Meat Lover's Pizza",
+            "brandName": "Carnivore's Delight",
+            "price": "$16.99"
+        },
+        {
+            "id": 27,
+            "category": "burger",
+            "foodImage": "https://i.pinimg.com/originals/c5/cc/20/c5cc2005ad651b73d324513750de085e.png",
+            "foodName": "Double Bacon Burger",
+            "brandName": "Greasy Spoon",
+            "price": "$10.99"
+        },
+        {
+            "id": 28,
+            "category": "burger",
+            "foodImage": "https://www.freepnglogos.com/uploads/pizza-png/derwent-park-pizza-5.png",
+            "foodName": "Cheese Stuffed Burger",
+            "brandName": "Cheese Lover's Grill",
+            "price": "$12.99"
+        },
+        {
+            "id": 29,
+            "category": "salad",
+            "foodImage": "https://banner2.cleanpng.com/20180413/axq/kisspng-salad-zakuski-health-food-green-salad-5ad09fa36b5fd9.5099105315236217954398.jpg",
+            "foodName": "Mediterranean Salad",
+            "brandName": "Mediterranean Eats",
+            "price": "$9.99"
+        },
+        {
+            "id": 30,
+            "category": "salad",
+            "foodImage": "https://ongpng.com/wp-content/uploads/2023/10/salad.png",
+            "foodName": "Waldorf Salad",
+            "brandName": "Fresh n' Crunchy",
+            "price": "$8.99"
+        },
+        {
+            "id": 31,
+            "category": "combo",
+            "foodImage": "https://png.pngtree.com/png-vector/20231018/ourmid/pngtree-fast-foods-item-png-image_10303953.png",
+            "foodName": "Combo 7",
+            "brandName": "Quick Bites",
+            "price": "$19.99"
+        },
+        {
+            "id": 32,
+            "category": "combo",
+            "foodImage": "https://static.vecteezy.com/system/resources/previews/027/297/753/original/buffet-table-scene-of-take-out-or-delivery-foods-fried-chicken-wings-and-french-fries-isolated-on-white-transparent-background-ai-generate-png.png",
+            "foodName": "Combo 8",
+            "brandName": "Snack Attack",
+            "price": "$18.99"
+        }
+    ]
+
+    
+      
     const pizzas = allFoods?.filter(foods => foods.category === "pizza")
     const salads = allFoods?.filter(foods => foods.category === "salad")
     const burgers = allFoods?.filter(foods => foods.category === "burger")
